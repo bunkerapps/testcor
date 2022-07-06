@@ -1,31 +1,32 @@
 # Adonis fullstack application
 
-This is the fullstack boilerplate for AdonisJs, it comes pre-configured with.
+Test COR.
 
-1. Bodyparser
-2. Session
-3. Authentication
-4. Web security middleware
-5. CORS
-6. Edge template engine
-7. Lucid ORM
-8. Migrations and seeds
+1. The code is in 
+```js
+/app/Controllers/Http/PrincipalController
+```
+
+Dada una lista de palabras, determine si las palabras se pueden encadenar para formar un
+círculo. Una palabra X se puede colocar delante de otra palabra Y en un círculo si el último
+carácter de X es el mismo que el primer carácter de Y.
+Por ejemplo, las palabras ['chair', 'height', 'racket', touch', 'tunic'] pueden formar el siguiente
+círculo: chair --> racket --> touch --> height --> tunic --> chair
+El resultado tiene que ser un archivo de texto con una palabra por línea, por ejemplo:
+chair
+racket
+touch
+height
+tunic
+Es muy importante la lógica y la performance del algoritmo.
+
 
 ## Setup
 
-Use the adonis command to install the blueprint
-
-```bash
-adonis new yardstick
-```
-
-or manually clone the repo and then run `npm install`.
+Manually clone the repo and then run `npm install`.
 
 
 ### Migrations
 
-Run the following command to run startup migrations.
+This project doesn't have migration's files.
 
-```js
-adonis migration:run
-```

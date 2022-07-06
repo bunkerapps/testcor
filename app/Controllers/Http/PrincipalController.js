@@ -2,12 +2,14 @@
 
 class PrincipalController {
     async wordCircle({ request, response }) {
+        //receive an array of words
         const { data } = request.all()
         let dataNormalized = data.replace(/'/g, '"')
-        let words = JSON.parse(dataNormalized)
-        let proccesed = [words[0]]
-        let unproccesed = words
 
+        let words = JSON.parse(dataNormalized)
+        let processed = [words[0]]
+        let unprocessed = words
+        //check if the words can be processed
         let firstLetters = []
         let lastLetters = []
         words.map((word) => {
@@ -21,24 +23,24 @@ class PrincipalController {
         })
         if (notCircle.length > 0) return "rejected"
 
-        while (unproccesed.length !== 0) {
-            unproccesed.map((wordProccesing) => {
-                let lastWordLastLetter = proccesed[proccesed.length - 1].slice(-1)
-                let firstLetterProccesing = wordProccesing.slice(0, 1)
-
-                if (proccesed.includes(wordProccesing)) {
-                        unproccesed.splice(wordProccesing, 1)
+        //at this point the circle has been validated, process begins
+        while (unprocessed.length !== 0) {
+            unprocessed.map((wordProcessing) => {
+                let lastWordLastLetter = processed[processed.length - 1].slice(-1)
+                let firstLetterProcessing = wordProcessing.slice(0, 1)
+                if (processed.includes(wordProcessing)) {
+                        unprocessed.splice(wordProcessing, 1)
                 }
-                if (firstLetterProccesing == lastWordLastLetter) {
-                    proccesed.push(wordProccesing)
+                if (firstLetterProcessing == lastWordLastLetter) {
+                    processed.push(wordProcessing)
                 }
-                return proccesed
+                return processed
             })
         }
         // add first word at the end
-        proccesed.push(proccesed[0])
-        console.log(proccesed)
-        response.send(proccesed)
+        processed.push(processed[0])
+        console.log(processed)
+        response.send(processed)
     }
 }
 
