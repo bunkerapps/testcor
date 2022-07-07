@@ -38,6 +38,8 @@ class PrincipalController {
             })
         }
         // add first word at the end
+
+        //TODO generate and formate the file
         processed.push(processed[0])
         console.log(processed)
         response.send(processed)
