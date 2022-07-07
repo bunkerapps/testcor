@@ -6,7 +6,7 @@ Test COR.
 ```js
 /app/Controllers/Http/PrincipalController
 ```
-2. The route "/" (home) espects a body parameter call data.
+2. The route "/" (home) espects a body parameter called data.
 Example:
 ```js
 http://127.0.0.1:3333?data=['chair', 'height', 'racket', 'touch', 'tunic']
