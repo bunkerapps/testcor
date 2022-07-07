@@ -1,5 +1,5 @@
 'use strict'
-
+// const fs = require('fs')
 class PrincipalController {
     async wordCircle({ request, response }) {
         //receive an array of words
@@ -40,6 +40,15 @@ class PrincipalController {
         // add first word at the end
 
         //TODO generate and formate the file
+        // fs.writeFile(`${processed}`, "module.exports = " + result, function (err) {
+        //     if (err) {
+        //         console.log(err)
+        //         throw error
+        //     }
+        //     console.log("File success");
+        // })
+
+
         processed.push(processed[0])
         console.log(processed)
         response.send(processed)
