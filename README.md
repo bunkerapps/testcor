@@ -1,9 +1,16 @@
-# Test COR.
+# Diego S. Pacheco
+
+Test COR.
 
 1. The code is in 
 ```js
 /app/Controllers/Http/PrincipalController
 ```
+2. The route "/" (home) espects a body parameter call data.
+Example: ```js
+127.0.0.1:3333?data=['chair', 'height', 'racket', 'touch', 'tunic']
+```
+
 Inglés:
 Given a list of words, determine whether the words can be chained to form a circle. A word X
 can be placed in front of another word Y in a circle if the last character of X is the same as
@@ -17,7 +24,7 @@ touch
 height
 tunic
 Is very important the logic and the performance of the algorithm.
------------------------------------------------------------------
+
 Español:
 Dada una lista de palabras, determine si las palabras se pueden encadenar para formar un
 círculo. Una palabra X se puede colocar delante de otra palabra Y en un círculo si el último
