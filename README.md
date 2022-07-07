@@ -9,7 +9,7 @@ Test COR.
 2. The route "/" (home) espects a body parameter call data.
 Example:
 ```js
-127.0.0.1:3333?data=['chair', 'height', 'racket', 'touch', 'tunic']
+http://127.0.0.1:3333?data=['chair', 'height', 'racket', 'touch', 'tunic']
 ```
 
 Inglés:
